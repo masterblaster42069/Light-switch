@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .lamp {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        .gray {background-color: gray;}
+        .yellow {background-color: yellow;}
+    </style>
+    <div id="light" class="lamp" style="background-color: gray;"></div>
+
+    <button id="switchOn" onclick="toggleLamp()">Switch</button>
+    
+
+    <script>
+        let light = false;
+
+        function toggleLamp(){
+            light = !light;
+
+            if (light) {
+                document.getElementById('light').style.backgroundColor = "yellow"
+            } else{
+                document.getElementById('light').style.backgroundColor = "gray"
+            }
+        }
+    </script>
+
+
+</body>
+</html>
